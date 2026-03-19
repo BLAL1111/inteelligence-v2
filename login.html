@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligence — دخول</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;900&family=Outfit:wght@400;500;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="dark-mode">
+  <div class="auth-page">
+    <div class="auth-topbar">
+      <a href="/" class="logo">
+        <img src="assets/images/logo-dark.svg" alt="Intelligence" class="logo-dark">
+        <img src="assets/images/logo-light.svg" alt="Intelligence" class="logo-light">
+      </a>
+      <div class="auth-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="ar">AR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="theme-toggle">
+          <button class="theme-btn">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button class="tab-btn active" data-tab="login">تسجيل دخول</button>
+          <button class="tab-btn" data-tab="register">إنشاء حساب</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="auth-form active">
+          <form id="loginFormElement">
+            <div class="form-group">
+              <label>البريد الإلكتروني</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label>كلمة المرور</label>
+              <div class="password-wrapper">
+                <input type="password" name="password" required minlength="8">
+                <button type="button" class="password-toggle">👁️</button>
+              </div>
+            </div>
+            <div class="form-group forgot-password">
+              <a href="#">نسيت كلمة المرور؟</a>
+            </div>
+            <button type="submit" class="btn-primary w-100">تسجيل دخول</button>
+          </form>
+          <div id="loginMessage" class="auth-message"></div>
+        </div>
+
+        <!-- Register Form -->
+        <div id="registerForm" class="auth-form">
+          <form id="registerFormElement">
+            <div class="form-group">
+              <label>الاسم</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+              <label>البريد الإلكتروني</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label>كلمة المرور</label>
+              <div class="password-wrapper">
+                <input type="password" name="password" id="regPassword" required minlength="8">
+                <button type="button" class="password-toggle">👁️</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>تأكيد كلمة المرور</label>
+              <div class="password-wrapper">
+                <input type="password" name="password_confirmation" required>
+                <button type="button" class="password-toggle">👁️</button>
+              </div>
+            </div>
+            <div class="password-strength">
+              <div class="strength-bar" id="strengthBar"></div>
+            </div>
+            <button type="submit" class="btn-primary w-100">إنشاء حساب</button>
+          </form>
+          <div id="registerMessage" class="auth-message"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
