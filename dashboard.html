@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;900&family=Outfit:wght@400;500;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body class="dark-mode">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/images/logo-dark.svg" alt="Intelligence" class="logo-dark">
+        <img src="assets/images/logo-light.svg" alt="Intelligence" class="logo-light">
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active">الرئيسية</a>
+        <a href="#">العملاء</a>
+        <a href="#">الطلبات</a>
+        <a href="#">الإعدادات</a>
+      </nav>
+      <button class="logout-btn" id="logoutBtn">تسجيل خروج</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <h1>مرحباً، أحمد</h1>
+        <div class="header-actions">
+          <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="ar">AR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <div class="theme-toggle">
+            <button class="theme-btn">
+              <span class="light-icon">☀️</span>
+              <span class="dark-icon">🌙</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h3>إجمالي العملاء</h3>
+          <div class="number">124</div>
+        </div>
+        <div class="stat-card">
+          <h3>طلبات جديدة</h3>
+          <div class="number">18</div>
+        </div>
+        <div class="stat-card">
+          <h3>صفقات مكتملة</h3>
+          <div class="number">47</div>
+        </div>
+      </div>
+
+      <div class="contacts-table">
+        <table>
+          <thead>
+            <tr>
+              <th>الاسم</th>
+              <th>الهاتف</th>
+              <th>نوع المتجر</th>
+              <th>الحالة</th>
+              <th>تاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="contactsBody">
+            <!-- تملأ بـ JS -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
